@@ -9,6 +9,7 @@ const bcrypt = require('bcrypt')
 const Get_All_Users = async (req,res)=>{
     
     const {_id} = req.id
+    const {gid} = req.body
 
     const user = await UserModel.findById(_id)
 
@@ -19,7 +20,7 @@ const Get_All_Users = async (req,res)=>{
 
     if (user.role==="admin"){
 
-        const users = await UserModel.find({groups_ID:_id})
+        const users = await UserModel.find({groups_ID:gid})
 
         if (!users){
             return res.status(404).json({error:"Opps no user found"})
