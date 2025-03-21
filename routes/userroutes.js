@@ -10,7 +10,7 @@ router.use(Auth)
 
 // get all users
 
-router.get('/users',Get_All_Users)
+router.post('/users',Get_All_Users)
 
 // get single user
 
