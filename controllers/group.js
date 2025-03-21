@@ -114,7 +114,7 @@ const Invite_To_Group = async (req,res)=>{
                 if (error) res.status(500).json({error:error});
                 else {
                     
-                    return res.status(200).json(user)}
+                    return res.status(200).json({message:"Invitaion sent to the user"})}
             });
 
             return res.status(200).json({message:"Invitaion sent to the user"})
@@ -141,7 +141,7 @@ const Invite_To_Group = async (req,res)=>{
                 if (error) res.status(500).json({error:error});
                 else {
                     
-                    return res.status(200).json(user)}
+                    return res.status(200).json({message:"Invitaion sent to the user"})}
             });
     
             return res.status(200).json({message:"Invitaion sent to the user"})
