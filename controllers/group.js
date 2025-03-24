@@ -17,8 +17,8 @@ const nodemailer = require('nodemailer')
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "asfawfanual2003@gmail.com",
-        pass: "kvtm vara qdod ofcu",
+        user: process.env.EMAIL_ADDRESS,
+        pass: process.env.GOOGLE_PASS
     },
     tls: {
         // do not fail on invalid certs
@@ -105,7 +105,7 @@ const Invite_To_Group = async (req,res)=>{
         if (!user){
             
             const mailOptions = {
-                from: "asfawfanual2003@gmail.com",
+                from: process.env.EMAIL_ADDRESS,
                 to: email,
                 subject: "Group Invitaion",
                 html:`
@@ -134,7 +134,7 @@ const Invite_To_Group = async (req,res)=>{
         else if (user.role==='user'){
 
             const mailOptions = {
-                from: 'asfawfanual2003@gmail.com',
+                from: process.env.EMAIL_ADDRESS,
                 to: email,
                 subject: "Group Invitaion",
                 html:`
