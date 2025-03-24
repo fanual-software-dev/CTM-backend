@@ -1,14 +1,12 @@
 require('dotenv').config()
 
 const express = require('express')
-
 const mongoose = require('mongoose')
 const DB_URI = process.env.MONGO_URI
 const taskRouter = require('./routes/routes')
 const userRouter = require('./routes/userroutes')
 const sessionRouter = require('./routes/session')
 const groupRouter = require('./routes/grouproutes')
-const passport = require('passport')
 const cors = require('cors')
 const app = express()
 
@@ -34,8 +32,8 @@ app.use(express.json());
 app.use(cors())
 
 
-app.use(passport.initialize())
-app.use(passport.session())
+
+
 
 // app.get('/auth',(req,res)=>{
 //     res.send('<a href="/auth/google">Sign up with google</a>') 
