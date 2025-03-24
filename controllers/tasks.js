@@ -9,8 +9,8 @@ const GroupModel = require('../models/groups')
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_ADDRESS,
-      pass: process.env.GOOGLE_PASS,
+        user: 'asfawfanual2003@gmail.com',
+        pass: "kvtm vara qdod ofcu",
     },
     tls: {
         // do not fail on invalid certs

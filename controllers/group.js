@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: 'asfawfanual2003@gmail.com',
-      pass: process.env.GOOGLE_PASS,
+      pass: "kvtm vara qdod ofcu",
     },
     tls: {
         // do not fail on invalid certs
