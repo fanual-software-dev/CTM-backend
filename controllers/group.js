@@ -141,7 +141,7 @@ const Invite_To_Group = async (req,res)=>{
                     <body style="background:rgb(222, 222, 222); padding: 20px; color:rgb(0, 8, 11);">
                         <h4 style="color:rgb(1, 58, 60)">Group Invitation</h4>
                         <p> <span style="color: rgb(0, 8, 11); font-family: Poppins">${caller.name}</span> has invited you to join the group <span style="color: rgb(0, 8, 11); font-family: Poppins">${group.name}</span></p>
-                        <p>Please use the link below to join the group</p>
+                        <p>Please use the link below to join the group. But first make sure that you are logged in.</p>
                         <a href="https://ctm-frontend.vercel.app/join/group?id=${gid}" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Join Group</a></
                         
                     </body>
