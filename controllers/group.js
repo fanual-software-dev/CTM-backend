@@ -1,13 +1,12 @@
 const GroupModel = require('../models/groups')
 const UsersModel = require('../models/users')
-const mongoose = require('mongoose')
 const nodemailer = require('nodemailer')
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: 'asfawfanual2003@gmail.com',
-      pass: "kvtm vara qdod ofcu",
+      user:"asfawfanual2003@gmail.com",
+      pass:"kvtm vara qdod ofcu",
     },
     tls: {
         // do not fail on invalid certs
@@ -94,7 +93,7 @@ const Invite_To_Group = async (req,res)=>{
         if (!user){
             
             const mailOptions = {
-                from: 'asfawfanual2003@gmail.com',
+                from: "asfawfanual2003@gmail.com",
                 to: email,
                 subject: "Group Invitaion",
                 html:`
