@@ -121,14 +121,14 @@ const Invite_To_Group = async (req,res)=>{
                     `
               };
               
-            await transporter.sendMail(mailOptions, (error, info) => {
-                if (error) res.status(500).json({error:error});
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) return res.status(500).json({error:error});
                 else {
                     
                     return res.status(200).json({message:"Invitaion sent to the user"})}
             });
 
-            return res.status(200).json({message:"Invitaion sent to the user"})
+            return 
         }
 
         else if (user.role==='user'){
@@ -155,11 +155,11 @@ const Invite_To_Group = async (req,res)=>{
                     return res.status(200).json({message:"Invitaion sent to the user"})}
             });
     
-            return res.status(200).json({message:"Invitaion sent to the user"})
+            
         }
 
 
-        return res.status(404).json({error:'The given user is admin and admins can not be added to groups.'})
+        else return res.status(404).json({error:'The given user is admin and admins can not be added to groups.'})
 
 
 
