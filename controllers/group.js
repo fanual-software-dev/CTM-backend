@@ -115,7 +115,7 @@ const Invite_To_Group = async (req,res)=>{
                         <p>But we understand you are not signed up to our platform. So fisrt signup to our platform using this link: </p>
                         <a href="https://ctm-frontend.vercel.app/role" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Sign Up</a> 
                         <p>then use the link below to join the group</p>
-                        <a href="https://ctm-frontend.vercel.app/join?id=${gid}" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Join Group</a></
+                        <a href="https://ctm-frontend.vercel.app/join/group?id=${gid}" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Join Group</a></
                         
                     </body>
                     `
@@ -142,7 +142,7 @@ const Invite_To_Group = async (req,res)=>{
                         <h4 style="color:rgb(1, 58, 60)">Group Invitation</h4>
                         <p> <span style="color: rgb(0, 8, 11); font-family: Poppins">${caller.name}</span> has invited you to join the group <span style="color: rgb(0, 8, 11); font-family: Poppins">${group.name}</span></p>
                         <p>Please use the link below to join the group</p>
-                        <a href="https://ctm-frontend.vercel.app/join?id=${gid}" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Join Group</a></
+                        <a href="https://ctm-frontend.vercel.app/join/group?id=${gid}" style="background:dodgerblue; text-decoration:none; color:white; font-size:12px; font-family:Poppins; border:none; border-radius:5px; padding: 5px 10px">Join Group</a></
                         
                     </body>
                     `
