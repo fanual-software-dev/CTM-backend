@@ -121,7 +121,7 @@ const Invite_To_Group = async (req,res)=>{
                     `
               };
               
-            transporter.sendMail(mailOptions, (error, info) => {
+            await transporter.sendMail(mailOptions, (error, info) => {
                 if (error) res.status(500).json({error:error});
                 else {
                     
