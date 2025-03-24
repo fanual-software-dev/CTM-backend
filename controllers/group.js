@@ -2,17 +2,29 @@ const GroupModel = require('../models/groups')
 const UsersModel = require('../models/users')
 const nodemailer = require('nodemailer')
 
+// const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user:"asfawfanual2003@gmail.com",
+//       pass:"zklb tdrd lerx xkfv",
+//     },
+//     tls: {
+//         // do not fail on invalid certs
+//         rejectUnauthorized: false,
+//       }
+//   });
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user:"asfawfanual2003@gmail.com",
-      pass:"zklb tdrd lerx xkfv",
+        user: "asfawfanual2003@gmail.com",
+        pass: "kvtm vara qdod ofcu",
     },
     tls: {
         // do not fail on invalid certs
         rejectUnauthorized: false,
-      }
-  });
+        }
+});
 
 const Get_Group = async (req,res)=>{
     
