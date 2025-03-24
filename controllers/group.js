@@ -194,10 +194,9 @@ const Get_All_Groups = async (req,res)=>{
        
         try {
             const response = await GroupModel.find({admin:groups_ID[id]})
-            if (response.length>1){
-                fetched = [...fetched,...response]
-            }
-            else{fetched.push(response)}
+            fetched = [...fetched,...response]
+            
+            
             
         } catch (error) {
             console.log(error)
