@@ -94,7 +94,7 @@ const Invite_To_Group = async (req,res)=>{
         if (!user){
             
             const mailOptions = {
-                from: process.env.EMAIL_ACCOUNT,
+                from: 'asfawfanual2003@gmail.com',
                 to: email,
                 subject: "Group Invitaion",
                 html:`
@@ -123,7 +123,7 @@ const Invite_To_Group = async (req,res)=>{
         else if (user.role==='user'){
 
             const mailOptions = {
-                from: process.env.EMAIL_ACCOUNT,
+                from: 'asfawfanual2003@gmail.com',
                 to: email,
                 subject: "Group Invitaion",
                 html:`
