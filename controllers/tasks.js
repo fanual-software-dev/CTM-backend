@@ -122,7 +122,7 @@ const Create_Task = async (req,res)=>{
         return res.status(404).json({error:"No such user found or unauthorized access. please try again"})
     }
 
-    const group = await GroupModel.findOne({admin:_id})
+    const group = await GroupModel.findOne({_id:gid})
 
     if (!group){
         return res.status(404).json({error:"Group not found by this ID."})
